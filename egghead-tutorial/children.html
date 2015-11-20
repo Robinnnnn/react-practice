@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Hello World</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.3/react.min.js"></script>
+	<script src="http://fb.me/JSXTransformer-0.12.2.js"></script>
+</head>
+<body>
+	
+<script type="text/jsx">
+
+var App = React.createClass({
+	render: function() {
+		return <Button>I <Heart /> React</Button>
+	}
+});
+
+var Button = React.createClass({
+	render: function() {
+		return <button>{this.props.children}</button>
+	}
+})
+
+var Heart = React.createClass({
+	render: function() {
+		return <span className="glyphicon glyphicon-heart"></span>
+	}
+})
+
+React.render(<App />, document.body);
+
+</script>
+
+</body>
+</html>

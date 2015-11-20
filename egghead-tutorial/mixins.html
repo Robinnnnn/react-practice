@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Hello World</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.3/react.min.js"></script>
+	<script src="http://fb.me/JSXTransformer-0.12.2.js"></script>
+</head>
+<body>
+	
+<script type="text/jsx">
+
+var App = React.createClass({
+	render: function() {
+		return (
+			<div>
+				<Button txt="this is the button" />
+				<br />
+				<Label txt="this is the label" />
+			</div>
+		)
+	}
+});
+
+var Button = React.createClass({
+	render: function() {
+		return (
+			<button>{this.props.txt}</button>
+		);
+	}
+})
+
+var Label = React.createClass({
+	render: function() {
+		return (
+			<label>{this.props.txt}</label>
+		);
+	}
+})
+
+React.render(<App />, document.body);
+
+</script>
+
+</body>
+</html>
